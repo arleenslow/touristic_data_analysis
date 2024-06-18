@@ -82,26 +82,3 @@ sns.countplot(x='Destino del Viaje', hue='Tipo de Experiencia', data=reservas)
 plt.title('Relación entre Destino del Viaje y Tipo de Experiencia Más Reservada')
 plt.xticks(rotation=45)
 plt.show()
-
-# Visualización de Datos
-
-# Evolución temporal de las reservas
-plt.figure(figsize=(12, 6))
-reservas.set_index('Fecha de Reserva').resample('M').size().plot()
-plt.title('Evolución Temporal de las Reservas')
-plt.xlabel('Fecha')
-plt.ylabel('Número de Reservas')
-plt.show()
-
-# Evolución temporal de los tours
-plt.figure(figsize=(12, 6))
-tours.set_index('Date').resample('M').size().plot()
-plt.title('Evolución Temporal de los Tours')
-plt.xlabel('Fecha')
-plt.ylabel('Número de Tours')
-plt.show()
-
-# Mapa de distribución geográfica de los destinos turísticos
-# Nota: Este paso requiere instalación y configuración de geopandas y shapely para crear mapas interactivos.
-
-
